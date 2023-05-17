@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
-import { FaBeer, FaDiscord, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import {  FaDiscord, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 
 
