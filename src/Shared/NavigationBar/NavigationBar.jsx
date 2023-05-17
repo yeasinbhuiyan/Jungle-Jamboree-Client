@@ -12,7 +12,7 @@ const NavigationBar = () => {
     const navigationLink = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/allToys'>All Toys</Link></li>
-        <li><Link>My Toys</Link></li>
+        <li><Link to='/myToys'>My Toys</Link></li>
         <li><Link to='/addToys'>Add a Toys</Link></li>
 
 
