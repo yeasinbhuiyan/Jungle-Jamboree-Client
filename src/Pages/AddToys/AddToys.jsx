@@ -1,43 +1,50 @@
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProviders/AuthProvider";
 
 const AddToys = () => {
+    const {user} = useContext(AuthContext)
     const handleSubmit = (event) => {
-        //     "img": "https://media.istockphoto.com/id/481198620/photo/terrier-playing-with-a-colourful-ball.jpg?b=1&s=170667a&w=0&k=20&c=txqB6WUbT7TjZwSn40JFRwykkmGUTKHVwu1gJlygUSA=",
-        //     "toy_name": "Dogs",
-        //     "seller_name": "Puppy Paradise",
-        //     "seller_email": "sales@puppyparadise.com",
-        //     "price": "14.99",
-        //     "ratings": 4.8,
-        //     "available_quantity": 12,
-        //     "subcategory": "Teddy Bear , Horse , Dinosaur , Cat , Unicorn , Cows , Rabbit , Elephant , Penguin",
-        //     "description": "Adorable and playful dog toys that are perfect for interactive playtime."
-        // },
+
         event.preventDefault()
         const form = event.target
-        const sellerName = form.seller_name.value
-        const sellerEmail = form.seller_email.value
+        const seller_name = form.seller_name.value
+        const seller_email = form.seller_email.value
 
-        const toyName = form.toy_name.value
+        const toy_name = form.toy_name.value
         const description = form.description.value
-        const quantity = form.quantity.value
+        const available_quantity = form.quantity.value
         const subcategory = form.subcategory.value
         const price = form.price.value
-        const rating = form.rating.value
+        const ratings = form.rating.value
         const img = form.img.value
 
         const addToysDetails = {
             img,
-            toy_name: toyName,
-            seller_name: sellerName,
-            seller_email: sellerEmail,
+            toy_name,
+            seller_name,
+            seller_email,
             price,
-            ratings: rating,
-            available_quantity: quantity,
+            ratings,
+            available_quantity,
             subcategory,
             description,
 
 
         }
         console.log(addToysDetails)
+        fetch('http://localhost:5000/addToys', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addToysDetails)
+        })
+            .then(res => res.json())
+            .then(data => {
+                
+                console.log(data)
+            })
+
     }
     return (
 
@@ -48,15 +55,15 @@ const AddToys = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text">Name</span>
                         </label>
-                        <input type="text" name='seller_name' placeholder="Your Name" className="input input-bordered" required />
+                        <input type="text" name='seller_name' placeholder="Your Name" className="input input-bordered"  />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Your Email</span>
+                            <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name='seller_email' placeholder="Your Email" className="input input-bordered" required />
+                        <input type="email" defaultValue={user?.email} name='seller_email' placeholder="Your Email" className="input input-bordered" required />
 
                     </div>
                     <div className="form-control">
