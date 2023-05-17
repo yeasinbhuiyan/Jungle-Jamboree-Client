@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.btn-success{
+  @apply bg-green-700 px-2 text-white rounded border border-green-300 hover:bg-green-900
+}

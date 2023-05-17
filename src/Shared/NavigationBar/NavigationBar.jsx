@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import logo from '/public/logo.jpeg';
+import logo from '/logo.jpeg';
 
 
 const NavigationBar = () => {
     const navigationLink = <>
-        <li><Link>Home</Link></li>
-        <li><Link>All Toys</Link></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/allToys'>All Toys</Link></li>
         <li><Link>My Toys</Link></li>
         <li><Link>Add a Toys</Link></li>
         
@@ -43,6 +43,7 @@ const NavigationBar = () => {
                 <a className="btn">Get started</a>
             </div>
         </div>
+        
     );
 };
 
