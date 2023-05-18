@@ -165,7 +165,7 @@ const AddToys = () => {
 
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn btn-success">Login</button>
+                    <button className="btn btn-success">Add Toys</button>
                 </div>
             </form>
         </div>

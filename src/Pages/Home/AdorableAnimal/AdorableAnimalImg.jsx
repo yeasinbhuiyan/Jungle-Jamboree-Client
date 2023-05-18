@@ -1,6 +1,6 @@
 
 
-const GalleryImg = ({toy}) => {
+const AdorableAnimalImg = ({toy}) => {
     return (
         <>
             <img title={toy.toy_name} className="w-80 h-60 rounded" src={toy.img} alt="" />
@@ -9,4 +9,4 @@ const GalleryImg = ({toy}) => {
     );
 };
 
-export default GalleryImg;
+export default AdorableAnimalImg;
