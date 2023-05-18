@@ -1,5 +1,5 @@
 import { FaTrashAlt } from "react-icons/fa";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
 

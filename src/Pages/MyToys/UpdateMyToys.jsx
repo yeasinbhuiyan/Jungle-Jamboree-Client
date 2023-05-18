@@ -10,7 +10,7 @@ const UpdateMyToys = () => {
         event.preventDefault()
         console.log(_id)
         const form = event.target
-        const price = form.price.value
+        const price = parseFloat(form.price.value)
         const description = form.description.value
         const available_quantity = form.quantity.value
         const updateDetails = {
@@ -26,18 +26,18 @@ const UpdateMyToys = () => {
             },
             body: JSON.stringify(updateDetails)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
 
     }
 
     return (
-        <div className='m-10'>
-            <h1 className='font-semibold text-center text-3xl'>Update Your Details</h1>
+        <div className='my-32'>
+            <h1 className='font-semibold text-center my-5 text-3xl'>Update Your Details</h1>
             <form onSubmit={handleUpdate}>
-                <div className="grid grid-cols-1 md:grid-cols- m-10 gap-5">
+                <div className="grid grid-cols-1 w-[60%] mx-auto md:grid-cols-2 gap-5">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Price</span>
@@ -62,7 +62,7 @@ const UpdateMyToys = () => {
 
 
                 </div>
-                <div className="modal-action px-10 mt-0">
+                <div className="w-[60%] mx-auto mt-10">
                     <input className='btn-success btn' type="submit" value="Update" />
 
                 </div>

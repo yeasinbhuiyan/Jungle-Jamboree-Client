@@ -8,14 +8,26 @@ const MyToys = () => {
   const { user } = useContext(AuthContext)
   const [myToys, setMyToys] = useState([])
 
+  const [sorting, setSorting] = useState('')
+
+  const handleAscending = () => {
+    setSorting(1)
+
+
+  }
+
+  const hanldeDescending = () => {
+    setSorting(-1)
+
+  }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allToys?email=${user?.email}`)
+    fetch(`http://localhost:5000/myToys?email=${user?.email}&srt=${sorting }`)
       .then(res => res.json())
       .then(data => {
         setMyToys(data)
       })
-  }, [])
+  }, [sorting])
 
 
 
@@ -62,6 +74,10 @@ const MyToys = () => {
 
   return (
     <div className="overflow-x-auto w-full mx-auto my-10">
+      <div className="flex gap-8">
+        <button onClick={handleAscending} className="btn btn-success">Ascending</button>
+        <button onClick={hanldeDescending} className="btn btn-success">Descending</button>
+      </div>
       <table className="table w-full text-center mx-auto">
         {/* head */}
         <thead>
@@ -79,7 +95,7 @@ const MyToys = () => {
         </thead>
         <tbody>
           {
-            myToys.map(toy =>  <MyToysTable  key={toy._id} toy={toy} handleDelete={handleDelete}></MyToysTable>)
+            myToys.map(toy => <MyToysTable key={toy._id} toy={toy} handleDelete={handleDelete}></MyToysTable>)
           }
 
         </tbody>

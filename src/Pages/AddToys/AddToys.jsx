@@ -1,8 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
-
+import CreatableSelect from "react-select/creatable";
 const AddToys = () => {
-    const {user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
+    const [selectedOption, setSelectedOption] = useState(null);
+
     const handleSubmit = (event) => {
 
         event.preventDefault()
@@ -13,8 +15,8 @@ const AddToys = () => {
         const toy_name = form.toy_name.value
         const description = form.description.value
         const available_quantity = form.quantity.value
-        const subcategory = form.subcategory.value
-        const price = form.price.value
+        // const subcategory = form.subcategory.value
+        const price = parseFloat(form.price.value)
         const ratings = form.rating.value
         const img = form.img.value
 
@@ -26,7 +28,7 @@ const AddToys = () => {
             price,
             ratings,
             available_quantity,
-            subcategory,
+            subcategory: selectedOption,
             description,
 
 
@@ -41,11 +43,43 @@ const AddToys = () => {
         })
             .then(res => res.json())
             .then(data => {
-                
+
                 console.log(data)
             })
 
     }
+    const options = [
+        { value: 'Cow Ride-On Toys', label: 'Cow Ride-On Toys' },
+        { value: 'Cow Learning Toys', label: 'Cow Learning Toys' },
+        { value: 'Cow Plushies', label: 'Cow Plushies' },
+
+
+        { value: 'Roaring Kings', label: 'Roaring Kings' },
+        { value: 'Lion Pride Plush', label: 'Lion Pride Plush' },
+        { value: 'Cowardly Lion', label: 'Cowardly Lion' },
+
+        { value: 'Teddy Bear', label: 'Teddy Bear' },
+        { value: 'Red Panda', label: 'Red Panda' },
+        { value: 'Plush Panda', label: 'Plush Panda' },
+
+        { value: 'Nutty Elepent', label: 'Nutty Elepent' },
+        { value: 'Pink Elepent', label: 'Pink Elepent' },
+        { value: 'Rubber Elepent', label: 'Rubber Elepent' },
+
+        { value: 'Perky Penguin', label: 'Plush Panda' },
+        { value: 'Christmas penguin', label: 'Christmas penguin' },
+        { value: 'Baby penguin', label: 'Baby penguin' },
+
+
+
+        { value: 'Majestic Tiger', label: 'Majestic Tiger' },
+        { value: 'Woolen Tiger', label: 'Woolen Tiger' },
+        { value: 'Fluffy Tiger', label: 'Fluffy Tiger' },
+
+
+
+    ];
+
     return (
 
 
@@ -57,7 +91,7 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" name='seller_name' placeholder="Your Name" className="input input-bordered"  />
+                        <input type="text" name='seller_name' placeholder="Your Name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -92,6 +126,8 @@ const AddToys = () => {
                         <input type="text" name='price' placeholder="Price" className="input input-bordered" required />
 
                     </div>
+
+
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Available Quantity</span>
@@ -106,13 +142,27 @@ const AddToys = () => {
                         <input type="text" name='description' placeholder="Description" className="input input-bordered" required />
 
                     </div>
+
+
                     <div className="form-control">
+
                         <label className="label">
                             <span className="label-text">Subcategory</span>
                         </label>
-                        <input type="text" name='subcategory' placeholder="Subcategory" className="input input-bordered" required />
+                        <CreatableSelect
+                            className="w-full h-full top-[5px]"
+                            name="subcategory"
+                            defaultValue={selectedOption}
+                            onChange={setSelectedOption}
+                            options={options}
+                            isMulti
+                        />
+                        {/* <input type="text" name='subcategory' placeholder="Subcategory" className="input input-bordered" required /> */}
 
                     </div>
+
+
+
                 </div>
                 <div className="form-control mt-6">
                     <button className="btn btn-success">Login</button>
