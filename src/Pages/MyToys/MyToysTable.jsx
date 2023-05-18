@@ -60,7 +60,7 @@ const MyToysTable = ({ toy, handleDelete }) => {
                 </td>
                 <td>{seller_email}</td>
                 <td>{toy_name}</td>
-                <td>{price}</td>
+                <td>${price}</td>
                 <th>
 
                  <Link className="btn-success" to={`/updateMyToys/${_id}`}><small className="text-sm">Update</small></Link>

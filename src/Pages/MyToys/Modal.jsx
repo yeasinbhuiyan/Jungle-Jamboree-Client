@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Modal = ({ toy }) => {
     const { _id, price, description } = toy
