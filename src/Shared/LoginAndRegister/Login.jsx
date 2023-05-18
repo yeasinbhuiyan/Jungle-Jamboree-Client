@@ -10,10 +10,6 @@ import { AuthContext } from '../../AuthProviders/AuthProvider';
 const Login = () => {
 
 
-
-
-
-
     const { loginAccount, google, github } = useContext(AuthContext)
 
 

@@ -1,34 +1,88 @@
+import { FaTrashAlt } from "react-icons/fa";
+import Modal from "./Modal";
+import { Link } from "react-router-dom";
 
 
-const MyToysTable = ({ toy }) => {
-    const { img, seller_email, seller_name, price, toy_name } = toy
+
+const MyToysTable = ({ toy, handleDelete }) => {
+    const { img, seller_email, seller_name, price, toy_name, _id } = toy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const handleUpdate = (event) => {
+
+    // console.log(id)
+
+    //     const form = event.target
+    //     const price = form.price.value
+    //     const description = form.description.value
+    //     const quantity = form.quantity.value
+
+    //     const updateDetails = {
+
+    //         price,
+    //         description,
+    //         quantity
+    //     }
+    //     console.log(updateDetails)
+
+    // }
+
+
+
+
     return (
-        <tr>
-            <th>
-                <button className="btn btn-circle btn-outline">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                </button>
-            </th>
-            <td>
-                <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                        <div className="w-20 h-20 rounded">
-                            <img src={img} alt="Avatar Tailwind CSS Component" />
+        <>
+            <tr>
+                <td>
+                    <div className="flex items-center space-x-3">
+                        <div className="avatar mx-auto">
+                            <div className="w-20 h-20 rounded ">
+                                <img src={img} alt="Avatar Tailwind CSS Component" />
+                            </div>
                         </div>
-                    </div>
 
-                </div>
-            </td>
-            <td>
-                {seller_name}
-            </td>
-            <td>{seller_email}</td>
-            <td>{toy_name}</td>
-            <td>{price}</td>
-            <th>
-                <button className="btn btn-ghost btn-xs">details</button>
-            </th>
-        </tr>
+                    </div>
+                </td>
+                <td>
+                    {seller_name}
+                </td>
+                <td>{seller_email}</td>
+                <td>{toy_name}</td>
+                <td>{price}</td>
+                <th>
+
+                 <Link className="btn-success" to={`/updateMyToys/${_id}`}><small className="text-sm">Update</small></Link>
+
+                    {/* <label htmlFor="my-modal" className="btn-success"  ><small className="text-sm">Update</small></label> */}
+                    {/* <label htmlFor="my-modal" className="btn-success"><small className="text-sm">Update</small></label> */}
+                </th>
+
+
+
+
+                <th>
+
+                    <FaTrashAlt onClick={() => handleDelete(_id)} className="text-red-600 mx-auto cursor-pointer"></FaTrashAlt>
+                </th>
+            </tr>
+
+            {/* <Modal toy={toy}></Modal> */}
+
+        </>
+
+
     );
 };
 

@@ -11,10 +11,10 @@ const AllToysCard = ({ toy }) => {
              
                
                {
-                  seller_name && <p className="font-semibold">Seller : {seller_name}</p>
-               } 
-                <p className="text-xl"><span className="font-bold">Price:</span> ${price}</p>
+                   seller_name && <p className="font-semibold">Seller : {seller_name}</p>
+                } 
                 <p><span className="font-bold ">Avaiable :</span> {available_quantity}</p>
+                <h2 className="text-xl"><span className="font-bold">Price:</span> ${price}</h2>
                 <p className="text-lg"><span className="font-semibold">Subcategory:</span> <span className="text-sm font-semibold">{subcategory}</span></p>
                 <div className="card-actions justify-end">
                     <button className="btn-success btn"><small>View Details</small></button>

@@ -6,14 +6,24 @@ import { AuthContext } from "../../AuthProviders/AuthProvider";
 
 const NavigationBar = () => {
     const { user, logOut } = useContext(AuthContext)
+    console.log(user?.photoURL)
     const handleLogout = () => {
         logOut()
     }
     const navigationLink = <>
         <li><Link to='/'>Home</Link></li>
+
         <li><Link to='/allToys'>All Toys</Link></li>
-        <li><Link to='/myToys'>My Toys</Link></li>
-        <li><Link to='/addToys'>Add a Toys</Link></li>
+        
+        {
+            user && <>
+
+                <li><Link to='/myToys'>My Toys</Link></li>
+                <li><Link to='/addToys'>Add a Toys</Link></li>
+            </>
+        }
+
+        <li><Link to='/blogs'>Blogs</Link></li>
 
 
 
@@ -45,13 +55,22 @@ const NavigationBar = () => {
                     {navigationLink}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end gap-3">
                 {user ? <button className="btn-success btn px-1" onClick={handleLogout}>Logout</button> :
                     <Link to='/login' className="btn-success btn px-1"> Login </Link>
                 }
 
 
+                {
+                    user?.photoURL && <div className="avatar">
+                        <div className="w-12 rounded-full">
+                            <img title={user?.displayName} src={user?.photoURL} alt="" />
+                        </div>
+                    </div>
+                }
+
             </div>
+
         </div>
 
     );

@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 
-console.log(import.meta.env.VITE_apiKey)
-console.log(import.meta.env.VITE_authDomain)
-console.log(import.meta.env.VITE_projectId)
-console.log(import.meta.env.VITE_storageBucket)
-console.log(import.meta.env.VITE_messagingSenderId)
-console.log(import.meta.env.VITE_appId)
+// console.log(import.meta.env.VITE_apiKey)
+// console.log(import.meta.env.VITE_authDomain)
+// console.log(import.meta.env.VITE_projectId)
+// console.log(import.meta.env.VITE_storageBucket)
+// console.log(import.meta.env.VITE_messagingSenderId)
+// console.log(import.meta.env.VITE_appId)
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_apiKey,
