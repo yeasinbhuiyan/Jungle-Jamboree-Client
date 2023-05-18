@@ -8,18 +8,6 @@ const MyToysTable = ({ toy, handleDelete }) => {
     const { img, seller_email, seller_name, price, toy_name, _id } = toy
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     // const handleUpdate = (event) => {
 
     // console.log(id)
