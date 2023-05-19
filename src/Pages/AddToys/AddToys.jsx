@@ -2,10 +2,14 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
 import CreatableSelect from "react-select/creatable";
 import Swal from "sweetalert2";
+// import Select from "react-select/dist/declarations/src/Select";
 const AddToys = () => {
     const { user } = useContext(AuthContext)
-    const [selectedOption, setSelectedOption] = useState(null);
+    // const [selectedOption, setSelectedOption] = useState(null);
 
+
+    const [category,setCategory]=useState('Ocean Explorers')
+    
     const handleSubmit = (event) => {
 
         event.preventDefault()
@@ -29,7 +33,7 @@ const AddToys = () => {
             price,
             ratings,
             available_quantity,
-            subcategory: selectedOption,
+            subcategory: category,
             description,
 
 
@@ -45,48 +49,59 @@ const AddToys = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(data.insertedId){
+                if (data.insertedId) {
                     Swal.fire(
                         'Added Product!',
                         'Successfully Added Your Product!',
                         'success'
-                      )
+                    )
 
                 }
             })
-
+            
     }
-    const options = [
-        { value: 'Cow Ride-On Toys', label: 'Cow Ride-On Toys' },
-        { value: 'Cow Learning Toys', label: 'Cow Learning Toys' },
-        { value: 'Cow Plushies', label: 'Cow Plushies' },
+
+    // const options = [
+    //     { value: 'Cow Ride-On Toys', label: 'Cow Ride-On Toys' },
+    //     { value: 'Cow Learning Toys', label: 'Cow Learning Toys' },
+    //     { value: 'Cow Plushies', label: 'Cow Plushies' },
 
 
-        { value: 'Roaring Kings', label: 'Roaring Kings' },
-        { value: 'Lion Pride Plush', label: 'Lion Pride Plush' },
-        { value: 'Cowardly Lion', label: 'Cowardly Lion' },
+    //     { value: 'Roaring Kings', label: 'Roaring Kings' },
+    //     { value: 'Lion Pride Plush', label: 'Lion Pride Plush' },
+    //     { value: 'Cowardly Lion', label: 'Cowardly Lion' },
 
-        { value: 'Teddy Bear', label: 'Teddy Bear' },
-        { value: 'Red Panda', label: 'Red Panda' },
-        { value: 'Plush Panda', label: 'Plush Panda' },
+    //     { value: 'Teddy Bear', label: 'Teddy Bear' },
+    //     { value: 'Red Panda', label: 'Red Panda' },
+    //     { value: 'Plush Panda', label: 'Plush Panda' },
 
-        { value: 'Nutty Elepent', label: 'Nutty Elepent' },
-        { value: 'Pink Elepent', label: 'Pink Elepent' },
-        { value: 'Rubber Elepent', label: 'Rubber Elepent' },
+    //     { value: 'Nutty Elepent', label: 'Nutty Elepent' },
+    //     { value: 'Pink Elepent', label: 'Pink Elepent' },
+    //     { value: 'Rubber Elepent', label: 'Rubber Elepent' },
 
-        { value: 'Perky Penguin', label: 'Plush Panda' },
-        { value: 'Christmas penguin', label: 'Christmas penguin' },
-        { value: 'Baby penguin', label: 'Baby penguin' },
-
-
-
-        { value: 'Majestic Tiger', label: 'Majestic Tiger' },
-        { value: 'Woolen Tiger', label: 'Woolen Tiger' },
-        { value: 'Fluffy Tiger', label: 'Fluffy Tiger' },
+    //     { value: 'Perky Penguin', label: 'Plush Panda' },
+    //     { value: 'Christmas penguin', label: 'Christmas penguin' },
+    //     { value: 'Baby penguin', label: 'Baby penguin' },
 
 
 
-    ];
+    //     { value: 'Majestic Tiger', label: 'Majestic Tiger' },
+    //     { value: 'Woolen Tiger', label: 'Woolen Tiger' },
+    //     { value: 'Fluffy Tiger', label: 'Fluffy Tiger' },
+
+
+
+    // ];
+
+
+
+    const handleCategory=(event)=>{
+        setCategory(event.target.value)
+        console.log(event.target.value)
+    }
+
+
+
 
     return (
 
@@ -158,14 +173,26 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">Subcategory</span>
                         </label>
-                        <CreatableSelect
+
+                        <select value={category} onChange={handleCategory} className='input'>
+                            <option value="Ocean Explorers">Ocean Explorers</option>
+                            <option value="Pet Pals">Pet Pals</option>
+                            <option value="Wild Kingdom">Wild Kingdom</option>
+                        </select>
+
+
+                        {/* <CreatableSelect
                             className="w-full h-full top-[5px]"
                             name="subcategory"
                             defaultValue={selectedOption}
                             onChange={setSelectedOption}
                             options={options}
                             isMulti
-                        />
+                        /> */}
+
+
+
+
                         {/* <input type="text" name='subcategory' placeholder="Subcategory" className="input input-bordered" required /> */}
 
                     </div>
