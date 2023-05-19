@@ -34,10 +34,10 @@ const UpdateMyToys = () => {
     }
 
     return (
-        <div className='my-32'>
+        <div className='m-32'>
             <h1 className='font-semibold text-center my-5 text-3xl'>Update Your Details</h1>
-            <form onSubmit={handleUpdate}>
-                <div className="grid grid-cols-1 w-[60%] mx-auto md:grid-cols-2 gap-5">
+            <form className="border rounded py-8 mt-10 px-0"  onSubmit={handleUpdate}>
+                <div className=" grid grid-cols-1 w-[80%] mx-auto md:grid-cols-2 gap-5">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Price</span>
@@ -62,7 +62,7 @@ const UpdateMyToys = () => {
 
 
                 </div>
-                <div className="w-[60%] mx-auto mt-10">
+                <div className="w-[80%] mx-auto mt-10">
                     <input className='btn-success btn' type="submit" value="Update" />
 
                 </div>

@@ -53,7 +53,7 @@ const AllToys = () => {
 
 
     return (
-        <div className='m-16'>
+        <div className='my-10'>
             {/* <div className="form-control">
                 <div className="input-group">
                     <input type="text" placeholder="Search…" className="input input-bordered" />
@@ -61,9 +61,9 @@ const AllToys = () => {
                 </div>
             </div> */}
             <form onSubmit={handleSearch} className="form-control">
-                <div className="text-center my-10">
+                <div className="text-center my-5">
                     <input name='search' type="text" placeholder="Search…" className="input input-bordered" />
-                    <input className=" bg-gradient-to-r from-gray-950 to-gray-600 p-3 rounded-lg font-semibold text-white" type="submit" value="Search" />
+                    <input className=" bg-gradient-to-r from-green-800 to-green-600 p-3 rounded-lg font-semibold text-white" type="submit" value="Search" />
                 </div>
             </form>
 

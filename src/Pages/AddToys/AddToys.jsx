@@ -84,8 +84,9 @@ const AddToys = () => {
 
 
 
-        <div className='m-10 my-24'>
-            <form onSubmit={handleSubmit}>
+        <div className='m-40 my-16'>
+            <form className="border rounded py-10 px-20" onSubmit={handleSubmit}>
+                <h1 className="text-center text-4xl mb-5 font-semibold">Add A Toys</h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     <div className="form-control">
                         <label className="label">
