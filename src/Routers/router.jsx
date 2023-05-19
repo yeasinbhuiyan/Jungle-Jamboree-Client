@@ -10,21 +10,22 @@ import MyToys from "../Pages/MyToys/MyToys";
 import Blogs from "../Pages/Blogs/Blogs";
 import UpdateMyToys from "../Pages/MyToys/UpdateMyToys";
 import AllToysDetails from "../Pages/AlllToys/AllToysDetails/AllToysDetails";
+import About from "../Pages/About/About";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element :<Main></Main>,
-        children : [
+        element: <Main></Main>,
+        children: [
             {
                 path: '/',
                 element: <Home></Home>
             },
             {
                 path: '/allToys',
-                element : <AllToys></AllToys>,
-                loader: ()=>fetch('http://localhost:5000/toysQuantity')
+                element: <AllToys></AllToys>,
+                loader: () => fetch('http://localhost:5000/toysQuantity')
             },
             {
                 path: '/addToys',
@@ -36,17 +37,22 @@ const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                element : <Login></Login>
+                element: <Login></Login>
             }
             ,
             {
                 path: '/register',
-                element : <Register></Register>
+                element: <Register></Register>
             }
             ,
             {
-                path : '/blogs',
+                path: '/blogs',
                 element: <Blogs></Blogs>
+
+            },
+            {
+                path: '/about',
+                element: <About></About>
 
             },
             {
@@ -57,10 +63,10 @@ const router = createBrowserRouter([
 
             }
 
-            ,{
+            , {
                 path: '/updateMyToys/:id',
                 element: <UpdateMyToys></UpdateMyToys>,
-                loader: ({params})=> fetch (`http://localhost:5000/singleToys/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/singleToys/${params.id}`)
             }
 
         ]
