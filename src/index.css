@@ -5,5 +5,5 @@
 
 
 .btn-success{
-  @apply bg-green-700 px-2 text-white rounded border border-green-300 hover:bg-green-900
+  @apply bg-cyan-600 px-2 text-white rounded border hover:border-cyan-200 border-cyan-200 hover:bg-cyan-700
 }

@@ -135,13 +135,13 @@ const Register = () => {
 
 
     return (
-        <form onSubmit={handleRegister} className="hero min-h-screen -z-0 bg-base-200">
-            <div className="flex-col p-10">
+        <form onSubmit={handleRegister} className="hero py-20 min-h-screen -z-0 bg-base-200">
+            <div className="flex-col p-10 ">
                 <div className="text-center">
-                    <h1 className="text-4xl font-bold">Please Register</h1>
+                    <h1 className="text-4xl font-semibold">Please Register</h1>
                 </div>
 
-                <div className="flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mt-5">
+                <div className="flex-shrink-0 rounded-lg  w-full max-w-sm shadow-2xl bg-base-100 mt-5">
                     <div className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -195,7 +195,7 @@ const Register = () => {
 
 
                         <div className="form-control mt-6">
-                            <button disabled={!email || !password || !img || !name || passwordError || emailError} className="btn btn-gray">Register</button>
+                            <button disabled={!email || !password || !img || !name || passwordError || emailError} className="btn btn-success">Register</button>
                         </div>
                         <p><small>Already have an account? <Link className='font-semibold' to='/login'>Login</Link></small></p>
                         <p className='text-red-400'>{error}</p>

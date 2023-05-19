@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
 import CreatableSelect from "react-select/creatable";
+import Swal from "sweetalert2";
 const AddToys = () => {
     const { user } = useContext(AuthContext)
     const [selectedOption, setSelectedOption] = useState(null);
@@ -33,7 +34,7 @@ const AddToys = () => {
 
 
         }
-        console.log(addToysDetails)
+        // console.log(addToysDetails)
         fetch('http://localhost:5000/addToys', {
             method: 'POST',
             headers: {
@@ -43,8 +44,15 @@ const AddToys = () => {
         })
             .then(res => res.json())
             .then(data => {
-
                 console.log(data)
+                if(data.insertedId){
+                    Swal.fire(
+                        'Added Product!',
+                        'Successfully Added Your Product!',
+                        'success'
+                      )
+
+                }
             })
 
     }
@@ -84,8 +92,8 @@ const AddToys = () => {
 
 
 
-        <div className='m-40 my-16'>
-            <form className="border rounded py-10 px-20" onSubmit={handleSubmit}>
+        <div className='md:m-40 m-10 my-16 add-banner'>
+            <form className="border rounded py-10 px-10 md:px-20" onSubmit={handleSubmit}>
                 <h1 className="text-center text-4xl mb-5 font-semibold">Add A Toys</h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     <div className="form-control">

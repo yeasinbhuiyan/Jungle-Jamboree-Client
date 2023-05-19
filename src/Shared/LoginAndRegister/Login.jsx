@@ -12,9 +12,13 @@ const Login = () => {
 
     const { loginAccount, google, github } = useContext(AuthContext)
 
+    
+    
+        const googelProvider = new GoogleAuthProvider
+        // const githubProvider = new GithubAuthProvider
 
-    const googelProvider = new GoogleAuthProvider
-    const githubProvider = new GithubAuthProvider
+
+
 
 
     const navigate = useNavigate()
@@ -22,19 +26,22 @@ const Login = () => {
     const from = location.state?.from.pathname || '/'
 
 
+
+
+
+
     const [error, setError] = useState('')
-
-
 
     const handleLogIn = (event) => {
         event.preventDefault()
+
+
+
 
         setError('')
         const eventTarget = event.target
         const email = eventTarget.email.value
         const password = eventTarget.password.value
-
-
 
 
         // eslint-disable-next-line no-useless-escape
@@ -45,7 +52,11 @@ const Login = () => {
 
 
 
+
+
+
         loginAccount(email, password)
+
 
 
 
@@ -60,11 +71,6 @@ const Login = () => {
                 console.log(error.message)
                 setError('Password Not Matched')
             })
-
-
-
-
-
 
 
     }
@@ -88,18 +94,18 @@ const Login = () => {
 
 
 
-    const handleGithubLogin = () => {
-        github(githubProvider)
-            .then(result => {
-                const logged = result.user
-                console.log(logged)
-                navigate(from)
-            })
-            .catch((error) => {
-                setError(error.message)
-                console.log(error.message)
-            })
-    }
+    // const handleGithubLogin = () => {
+    //     github(githubProvider)
+    //         .then(result => {
+    //             const logged = result.user
+    //             console.log(logged)
+    //             navigate(from)
+    //         })
+    //         .catch((error) => {
+    //             setError(error.message)
+    //             console.log(error.message)
+    //         })
+    // }
 
 
 
@@ -107,12 +113,12 @@ const Login = () => {
     return (
 
 
-        <form onSubmit={handleLogIn} className="main-container p-10  md:hero min-h-screen bg-base-200">
+        <form onSubmit={handleLogIn} className="main-container p-10 py-20   md:hero min-h-screen bg-base-200">
             <div className="flex-col">
                 <div className="text-center">
-                    <h1 className="text-5xl font-bold">Please Login</h1>
+                    <h1 className="text-5xl font-semibold">Please Login</h1>
                 </div>
-                <div className="flex-shrink-0 w-full max-w-sm  shadow-2xl bg-base-100 mt-5">
+                <div className="rounded-lg flex-shrink-0 w-full max-w-sm  shadow-2xl bg-base-100 mt-5">
                     <div className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -135,21 +141,22 @@ const Login = () => {
 
 
                         <div className="form-control mt-6">
-                            <button className="btn btn-dark  text-white">Login</button>
+                            <button className="btn btn-success  text-white">Login</button>
                         </div>
 
 
-                        <p className='text-center text-sm font-semibold'>Or Login With</p>
+                        <div className="divider">OR</div>
 
 
 
-                        <div className='flex mb-3 gap-4'>
+                        <div className=' mb-3 '>
                             <div>
-                                <button onClick={handleGoogleLogin} className="btn btn-outline"> <FaGoogle></FaGoogle> <small>Login With Google</small></button>
+
+                                <button onClick={handleGoogleLogin} className="w-full border-2 border-cyan-300 border-transparent btn btn-outline btn-info rounded-full"> <FaGoogle className='mr-2'></FaGoogle> <small>Login With Google</small></button>
                             </div>
-                            <div>
+                            {/* <div>
                                 <button onClick={handleGithubLogin} className="btn btn-outline"><FaGithub></FaGithub> <small>Login With Github</small></button>
-                            </div>
+                            </div> */}
                         </div>
 
 

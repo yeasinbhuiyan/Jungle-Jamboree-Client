@@ -1,11 +1,11 @@
-.about-banner{
-    background-image:  url('https://i.ibb.co/KxBDg8P/7.png');
+.about-banner {
+    background-image: url('https://i.ibb.co/KxBDg8P/7.png');
     height: 100%;
     /* width: 100%; */
     background-repeat: no-repeat;
 
     background-size: cover;
-    
+
 }
 
 /* .try{
@@ -21,20 +21,39 @@
     height: 90px;
     /* background: red; */
     transition: width 2s, height 4s;
-  }
-  
-  .try1:hover {
+}
+.try1:hover {
+    width: 250px;
+    height: 250px;
+
+}
+
+
+
+.try3 {
+    width: 50px;
+    height: 60px;
+    /* background: red; */
+    transition: width 2s, height 4s;
+}
+
+.try3:hover {
     width: 200px;
     height: 200px;
-  }
-.try2{
+
+}
+
+
+.try2 {
     /* width: 70px;
     height: 90px; */
     /* background: red; */
-    transition: width 2s, height 4s;
-  }
-  
-  .try2:hover {
+    transition: width 4s, height 6s;
+}
+
+.try2:hover {
     width: 200px;
     height: 200px;
-  }
+
+    
+}

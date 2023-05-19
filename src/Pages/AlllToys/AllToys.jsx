@@ -15,6 +15,7 @@ const AllToys = () => {
     const [itemsPerPage, setItemsPage] = useState(5)
 
     const totalPages = Math.ceil(toysQuantity / itemsPerPage)
+    console.log(toysQuantity)
     const paginationBtn = [...Array(totalPages).keys()]
 
 
@@ -63,7 +64,7 @@ const AllToys = () => {
             <form onSubmit={handleSearch} className="form-control">
                 <div className="text-center my-5">
                     <input name='search' type="text" placeholder="Search…" className="input input-bordered" />
-                    <input className=" bg-gradient-to-r from-green-800 to-green-600 p-3 rounded-lg font-semibold text-white" type="submit" value="Search" />
+                    <input className=" bg-gradient-to-r from-cyan-800 to-cyan-600 p-3 rounded-lg font-semibold text-white" type="submit" value="Search" />
                 </div>
             </form>
 
@@ -93,7 +94,7 @@ const AllToys = () => {
                         </thead>
                         <tbody>
                             {
-                                toys.map(toy => <AllToysCard key={toy._id} toy={toy}></AllToysCard>)
+                             toys &&  toys.map(toy => <AllToysCard key={toy._id} toy={toy}></AllToysCard>)
                             }
 
                         </tbody>

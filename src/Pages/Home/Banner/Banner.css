@@ -5,13 +5,27 @@
 
     
 } */
+/* linear-gradient(to bottom, rgba(26, 23, 13, 0.219), rgba(0, 0, 0, 0.273)) , */
 
 
+/* .add-banner{
+    background-image:  url('https://i.ibb.co/KxBDg8P/7.png');
+    height: 100%;
+ width: 100%;
+    background-repeat: no-repeat;
 
-.banner{
-    background-image: linear-gradient(to bottom, rgba(26, 23, 13, 0.219), rgba(0, 0, 0, 0.273)) , url('https://media.istockphoto.com/id/1312517211/photo/cute-easter-bunnies-made-of-paper-with-colorful-easter-eggs.jpg?s=612x612&w=0&k=20&c=zFC_SC90iE7jFHZYXk9-zoWv3zD9NSIPubk1F06LZB8=');
-    height: 600px;
-    width: 100%;
+    background-size: cover;
+
+} */
+
+
+/* https://i.ibb.co/KmrPPZm/349.jpg */
+/* https://i.ibb.co/TL2Ph7h/fluffy-toy-texture-close-up.jpg */
+
+.banner {
+    background-image: url('https://i.ibb.co/TL2Ph7h/fluffy-toy-texture-close-up.jpg');
+    height: 100vh;
+    
     background-repeat: no-repeat;
 
     background-size: cover;
