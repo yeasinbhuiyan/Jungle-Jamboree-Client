@@ -21,7 +21,7 @@ const AboutUs = () => {
                     </div>
                 </div>
                 <div className='space-y-6 mx-auto py-10'>
-                    <h1 className='text-3xl border-l-indigo-400 border-l-8 p-5 rounded-full font-light'>Learn About Us</h1>
+                    <h1 data-aos="fade-up" className='text-3xl border-l-indigo-400 border-l-8 p-5 rounded-full font-light'>Learn About Us</h1>
                     <div data-aos="fade-up"  className='space-y-3'>
                         <h1 className='font-semibold  text-3xl'>Join Our Animal Toys Adventure</h1>
                         <p className='font-medium text-sm'>Step into a world of imagination, exploration, and endless fun with Jungle Jamboree. Browse our extensive collection of animal toys and discover a world where creativity knows no bounds. We invite you to join our community of animal lovers and embark on an exciting adventure that will inspire joy, learning, and unforgettable memories.</p>
