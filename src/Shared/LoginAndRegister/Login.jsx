@@ -152,7 +152,7 @@ const Login = () => {
                         <div className=' mb-3 '>
                             <div>
 
-                                <button onClick={handleGoogleLogin} className="w-full border-2 border-cyan-300 border-transparent btn btn-outline btn-info rounded-full"> <FaGoogle className='mr-2'></FaGoogle> <small>Login With Google</small></button>
+                                <button onClick={handleGoogleLogin} className="w-full p-2 items-center border-2 flex hover:bg-cyan-400 text-cyan-400 hover:text-gray-700 border-cyan-300 rounded-full"> <FaGoogle className='mr-2'></FaGoogle> <small>Login With Google</small></button>
                             </div>
                             {/* <div>
                                 <button onClick={handleGithubLogin} className="btn btn-outline"><FaGithub></FaGithub> <small>Login With Github</small></button>

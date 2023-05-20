@@ -69,13 +69,6 @@ const AllToys = () => {
             </form>
 
 
-            {/* 
-            <div className='grid grid-cols-1 md:grid-cols-2 mx-auto gap-8'>
-
-                {
-                    toys.map(toy => <AllToysCard key={toy._id} toy={toy}></AllToysCard>)
-                }
-            </div> */}
 
 
             <div>
