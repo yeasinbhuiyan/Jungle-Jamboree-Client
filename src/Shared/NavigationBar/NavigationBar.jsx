@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '/logo.jpeg';
+// import logo from '/logo.jpeg';
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
 import { FaMailchimp } from "react-icons/fa";
