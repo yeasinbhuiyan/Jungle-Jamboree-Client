@@ -39,7 +39,7 @@ const AllToysCard = ({ toy }) => {
                 </td>
                 <td>
                     {
-                        price && price
+                        price && '$'+ price
                     }
 
                 </td>

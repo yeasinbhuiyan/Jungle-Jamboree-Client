@@ -13,7 +13,7 @@ const AllToys = () => {
     const [searchText, setSearchText] = useState('')
     const [currentPage, setCurrentPage] = useState(0)
 
-    const [itemsPerPage, setItemsPage] = useState(5)
+    const [itemsPerPage, setItemsPage] = useState(20)
 
     const totalPages = Math.ceil(toysQuantity / itemsPerPage)
     console.log(toysQuantity)
