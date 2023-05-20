@@ -38,6 +38,7 @@
     background-size: cover;
 
 }
+
 .banner-login {
     background-image: url(' https://i.ibb.co/TL2Ph7h/fluffy-toy-texture-close-up.jpg ');
     /* height: 100vh; */
@@ -47,6 +48,8 @@
     background-size: cover;
 
 }
+
+
 .banner-register {
     background-image: url(' https://i.ibb.co/6P53z0d/gallery2.jpg ');
     /* height: 100vh; */

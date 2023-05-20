@@ -73,11 +73,14 @@ const MyToys = () => {
   }
 
   return (
-    <div className="overflow-x-auto w-full mx-auto my-10">
-      <div className="flex gap-8 px-10 py-10">
+    <div className="my-10">
+     <div className="flex gap-8 px-10 py-10">
         <button onClick={handleAscending} className="btn btn-success">Ascending</button>
         <button onClick={hanldeDescending} className="btn btn-success">Descending</button>
       </div>
+    
+    <div className="overflow-x-auto w-full mx-auto">
+     
       <table className="table w-full text-center mx-auto">
         {/* head */}
         <thead>
@@ -101,6 +104,7 @@ const MyToys = () => {
         </tbody>
 
       </table>
+    </div>
     </div>
   );
 };

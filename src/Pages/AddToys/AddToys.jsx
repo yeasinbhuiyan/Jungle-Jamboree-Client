@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
-import CreatableSelect from "react-select/creatable";
+import './AddToys.css'
+// import CreatableSelect from "react-select/creatable";
 import Swal from "sweetalert2";
 // import Select from "react-select/dist/declarations/src/Select";
 const AddToys = () => {
@@ -8,8 +9,8 @@ const AddToys = () => {
     // const [selectedOption, setSelectedOption] = useState(null);
 
 
-    const [category,setCategory]=useState('Ocean Explorers')
-    
+    const [category, setCategory] = useState('Ocean Explorers')
+
     const handleSubmit = (event) => {
 
         event.preventDefault()
@@ -58,7 +59,7 @@ const AddToys = () => {
 
                 }
             })
-            
+
     }
 
     // const options = [
@@ -95,7 +96,7 @@ const AddToys = () => {
 
 
 
-    const handleCategory=(event)=>{
+    const handleCategory = (event) => {
         setCategory(event.target.value)
         console.log(event.target.value)
     }
@@ -106,82 +107,83 @@ const AddToys = () => {
     return (
 
 
+  
 
-        <div className='md:m-40 m-10 my-16 '>
-            <form className="border  banner-footer rounded py-10 px-10 md:px-20" onSubmit={handleSubmit}>
-                <h1 className="text-center text-4xl mb-5 font-semibold">Add A Toys</h1>
-                <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Name</span>
-                        </label>
-                        <input type="text" name='seller_name' placeholder="Your Name" className="input input-bordered" />
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Email</span>
-                        </label>
-                        <input type="email" defaultValue={user?.email} name='seller_email' placeholder="Your Email" className="input input-bordered" required />
+            <div className='md:m-40 m-10 addToy-banner my-16 '>
+                <form className="border  rounded py-10 px-10 md:px-20" onSubmit={handleSubmit}>
+                    <h1 className="text-center text-4xl mb-5 font-semibold">Add A Toys</h1>
+                    <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <input type="text" name='seller_name' placeholder="Your Name" className="input input-bordered" />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <input type="email" defaultValue={user?.email} name='seller_email' placeholder="Your Email" className="input input-bordered" required />
 
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Toy Name</span>
-                        </label>
-                        <input type="text" name='toy_name' placeholder="Toy Name" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Toy Image</span>
-                        </label>
-                        <input type="url" name='img' placeholder="URL" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Toy Name</span>
+                            </label>
+                            <input type="text" name='toy_name' placeholder="Toy Name" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Toy Image</span>
+                            </label>
+                            <input type="url" name='img' placeholder="URL" className="input input-bordered" required />
 
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Rating</span>
-                        </label>
-                        <input type="text" name='rating' placeholder="Rating" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Price</span>
-                        </label>
-                        <input type="text" name='price' placeholder="Price" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Rating</span>
+                            </label>
+                            <input type="text" name='rating' placeholder="Rating" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Price</span>
+                            </label>
+                            <input type="text" name='price' placeholder="Price" className="input input-bordered" required />
 
-                    </div>
-
-
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Available Quantity</span>
-                        </label>
-                        <input type="number" name='quantity' placeholder="Available Quantity" className="input input-bordered" required />
-
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Description</span>
-                        </label>
-                        <input type="text" name='description' placeholder="Description" className="input input-bordered" required />
-
-                    </div>
+                        </div>
 
 
-                    <div className="form-control">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Available Quantity</span>
+                            </label>
+                            <input type="number" name='quantity' placeholder="Available Quantity" className="input input-bordered" required />
 
-                        <label className="label">
-                            <span className="label-text">Subcategory</span>
-                        </label>
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Description</span>
+                            </label>
+                            <input type="text" name='description' placeholder="Description" className="input input-bordered" required />
 
-                        <select value={category} onChange={handleCategory} className='input'>
-                            <option value="Ocean Explorers">Ocean Explorers</option>
-                            <option value="Pet Pals">Pet Pals</option>
-                            <option value="Wild Kingdom">Wild Kingdom</option>
-                        </select>
+                        </div>
 
 
-                        {/* <CreatableSelect
+                        <div className="form-control">
+
+                            <label className="label">
+                                <span className="label-text">Subcategory</span>
+                            </label>
+
+                            <select value={category} onChange={handleCategory} className='input'>
+                                <option value="Ocean Explorers">Ocean Explorers</option>
+                                <option value="Pet Pals">Pet Pals</option>
+                                <option value="Wild Kingdom">Wild Kingdom</option>
+                            </select>
+
+
+                            {/* <CreatableSelect
                             className="w-full h-full top-[5px]"
                             name="subcategory"
                             defaultValue={selectedOption}
@@ -193,18 +195,19 @@ const AddToys = () => {
 
 
 
-                        {/* <input type="text" name='subcategory' placeholder="Subcategory" className="input input-bordered" required /> */}
+                            {/* <input type="text" name='subcategory' placeholder="Subcategory" className="input input-bordered" required /> */}
+
+                        </div>
+
+
 
                     </div>
+                    <div className="form-control mt-6">
+                        <button className="btn btn-success">Add Toys</button>
+                    </div>
+                </form>
+            </div>
 
-
-
-                </div>
-                <div className="form-control mt-6">
-                    <button className="btn btn-success">Add Toys</button>
-                </div>
-            </form>
-        </div>
 
 
     );
