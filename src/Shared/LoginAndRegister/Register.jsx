@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProviders/AuthProvider';
+import useTitle from '../../Hook/UseTitle';
 
 
 const Register = () => {
@@ -132,7 +133,7 @@ const Register = () => {
 
 
 
-
+useTitle('Register')
 
     return (
         <form onSubmit={handleRegister} className="hero py-24 banner-register min-h-screen -z-0 bg-base-200">

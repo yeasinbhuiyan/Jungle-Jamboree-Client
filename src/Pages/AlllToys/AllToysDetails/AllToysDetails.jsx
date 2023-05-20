@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Rating } from '@smastrom/react-rating'
 import {  useParams } from "react-router-dom";
+import useTitle from "../../../Hook/UseTitle";
 
 
 
@@ -20,14 +21,16 @@ const AllToysDetails = () => {
 
     console.log(toyDetail)
 
-    return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 m-10 my-20 items-center">
+    useTitle('Toys Details')
 
-            <div>
-                <h1 className="text-3xl font-sans"> {toy_name}</h1>
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 m-10  items-center pb-20">
+
+            <div className="mx-auto">
+                <h1 className="text-4xl font-semibold my-5"> {toy_name}</h1>
                 <img src={img} alt="" />
             </div>
-            <div className="space-y-4 md:mt-0 mt-10">
+            <div className="space-y-4 mx-auto md:mt-0 mt-10">
 
                 <h2 className="text-2xl font-semibold"> Seller Name : {seller_name}</h2>
                 <h4 className="font-bold text-sm"> Seller Email : {seller_email}</h4>

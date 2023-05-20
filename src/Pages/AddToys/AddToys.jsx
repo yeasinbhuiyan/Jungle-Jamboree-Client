@@ -3,12 +3,13 @@ import { AuthContext } from "../../AuthProviders/AuthProvider";
 import './AddToys.css'
 // import CreatableSelect from "react-select/creatable";
 import Swal from "sweetalert2";
+import useTitle from "../../Hook/UseTitle";
 // import Select from "react-select/dist/declarations/src/Select";
 const AddToys = () => {
     const { user } = useContext(AuthContext)
     // const [selectedOption, setSelectedOption] = useState(null);
 
-
+useTitle('Add Toys')
     const [category, setCategory] = useState('Ocean Explorers')
 
     const handleSubmit = (event) => {

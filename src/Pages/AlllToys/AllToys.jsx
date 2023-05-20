@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import AllToysCard from './AllToysCard';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../Hook/UseTitle';
 
 
 const AllToys = () => {
@@ -50,7 +51,7 @@ const AllToys = () => {
 
     // pagination 
 
-
+useTitle('All Toys')
 
 
     return (

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
 import MyToysTable from "./MyToysTable";
 import Swal from 'sweetalert2'
+import useTitle from "../../Hook/UseTitle";
 
 
 const MyToys = () => {
@@ -72,6 +73,7 @@ const MyToys = () => {
 
   }
 
+  useTitle('My Toys')
   return (
     <div className="my-10">
      <div className="flex gap-8 px-10 py-10">

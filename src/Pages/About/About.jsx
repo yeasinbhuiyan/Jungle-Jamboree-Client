@@ -1,7 +1,11 @@
-import React from 'react';
+
+import useTitle from '../../Hook/UseTitle';
 import './About.css'
 
+
+
 const About = () => {
+    useTitle('About')
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5 p-10 my-10 '>
