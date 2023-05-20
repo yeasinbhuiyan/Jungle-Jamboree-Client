@@ -12,7 +12,7 @@ const AllToysDetails = () => {
     const { id } = useParams()
     console.log(id)
     useEffect(() => {
-        fetch(`http://localhost:5000/singleToys/${id}`)
+        fetch(`https://jungle-jamboree-server.vercel.app/singleToys/${id}`)
             .then(res => res.json())
             .then(data => setToyDetail(data))
     }, [id])

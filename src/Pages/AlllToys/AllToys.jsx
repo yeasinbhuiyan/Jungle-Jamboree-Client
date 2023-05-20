@@ -23,10 +23,10 @@ const AllToys = () => {
 
     useEffect(() => {
         const fetchToys = async () => {
-            const response = await fetch(`http://localhost:5000/allToys/${searchText || '1'}?page=${currentPage}&limit=${itemsPerPage}`);
+            const response = await fetch(`https://jungle-jamboree-server.vercel.app/allToys/${searchText || '1'}?page=${currentPage}&limit=${itemsPerPage}`);
             const data = await response.json();
             setToys(data);
-            // fetch(`http://localhost:5000/allToys/${searchText || '1'}`)
+            // fetch(`https://jungle-jamboree-server.vercel.app/allToys/${searchText || '1'}`)
             // .then(res => res.json())
             // .then(data => setToys(data))
         }

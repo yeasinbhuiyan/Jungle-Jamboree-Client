@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/image.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jungle Jamboree</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/image.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jungle Jamboree</title>
+
+
+  <!-- aos animation link  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
+  <!-- <link rel="stylesheet" href="bower_components/aos/dist/aos.css" /> -->
+
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- <script src="bower_components/aos/dist/aos.js"></script>  -->
+
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 400,
+      easing: 'ease'
+    }
+    );
+  </script>
+</body>
+
 </html>

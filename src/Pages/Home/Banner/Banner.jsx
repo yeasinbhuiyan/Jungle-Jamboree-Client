@@ -1,9 +1,9 @@
 
 import './Banner.css'
-import img1 from '../../../assets/front-view-epiphany-day-female-figurine-with-sheep.jpg'
-import img2 from '../../../assets/38076.jpg'
-import img3 from '../../../assets/plush-toy-baby-socks.jpg'
-import img4 from '../../../assets/349.jpg'
+import img1 from '../../../assets/banner1.jpg'
+import img2 from '../../../assets/banner2.jpg'
+import img3 from '../../../assets/banner3.jpg'
+import img4 from '../../../assets/banner4.jpg'
 
 
 
@@ -14,7 +14,7 @@ const Banner = () => {
     return (
       
 
-        <div className="carousel w-full h-[600px]">
+        <div  className="carousel w-full h-[600px]">
         <div id="slide1" className="carousel-item relative w-full">
             <img src={img1} className="w-full rounded-xl" />
             <div className="absolute h-full flex rounded-xl items-center  left-0 top-0  bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">

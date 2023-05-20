@@ -22,7 +22,7 @@ const MyToys = () => {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myToys?email=${user?.email}&srt=${sorting }`)
+    fetch(`https://jungle-jamboree-server.vercel.app/myToys?email=${user?.email}&srt=${sorting }`)
       .then(res => res.json())
       .then(data => {
         setMyToys(data)
@@ -42,7 +42,7 @@ const MyToys = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/remove/${id}`, {
+        fetch(`https://jungle-jamboree-server.vercel.app/remove/${id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())

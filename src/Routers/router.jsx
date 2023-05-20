@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             {
                 path: '/allToys',
                 element: <AllToys></AllToys>,
-                loader: () => fetch('http://localhost:5000/toysQuantity')
+                loader: () => fetch('https://jungle-jamboree-server.vercel.app/toysQuantity')
             },
             {
                 path: '/addToys',
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
             {
                 path: '/allToysDetails/:id',
                 element: <PrivateRoute><AllToysDetails></AllToysDetails></PrivateRoute>,
-                // loader: (params)=> fetch(`http://localhost:5000/singleToys/${params.id}`)
+                // loader: (params)=> fetch(`https://jungle-jamboree-server.vercel.app/singleToys/${params.id}`)
 
 
             }
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
             , {
                 path: '/updateMyToys/:id',
                 element: <UpdateMyToys></UpdateMyToys>,
-                loader: ({ params }) => fetch(`http://localhost:5000/singleToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://jungle-jamboree-server.vercel.app/singleToys/${params.id}`)
             }
 
         ]

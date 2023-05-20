@@ -6,7 +6,7 @@ const WildKingDom = () => {
     const [wildKingdom, setWildKingDom] = useState([])
     useEffect(() => {
 
-        fetch('http://localhost:5000/allToysTabs')
+        fetch('https://jungle-jamboree-server.vercel.app/allToysTabs')
             .then(res => res.json())
             .then(data => {
                 if (data) {

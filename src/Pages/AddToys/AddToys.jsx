@@ -40,7 +40,7 @@ const AddToys = () => {
 
         }
         // console.log(addToysDetails)
-        fetch('http://localhost:5000/addToys', {
+        fetch('https://jungle-jamboree-server.vercel.app/addToys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -5,7 +5,7 @@ import OceansCard from "./OceansCard";
 const Oceans = () => {
     const [oceans, setOceans] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allToysTabs')
+        fetch('https://jungle-jamboree-server.vercel.app/allToysTabs')
             .then(res => res.json())
             .then(data => {
                 if (data) {

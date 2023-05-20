@@ -20,7 +20,7 @@ const UpdateMyToys = () => {
             description,
             available_quantity
         }
-        fetch(`http://localhost:5000/update/${_id}`, {
+        fetch(`https://jungle-jamboree-server.vercel.app/update/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

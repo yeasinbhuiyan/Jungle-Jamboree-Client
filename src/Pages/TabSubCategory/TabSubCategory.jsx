@@ -8,7 +8,7 @@ import WildKingDom from "./WildKingDom/WildKingDom";
 
 const TabSubCategory = () => {
     return (
-        <div>
+        <div data-aos="fade-up">
             <Tabs className='rounded-3xl md:p-10  mx-auto'>
                     <TabList>
                         <Tab>Ocean Explorers </Tab>
