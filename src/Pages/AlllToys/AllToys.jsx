@@ -76,7 +76,7 @@ const AllToys = () => {
                     <table className="table mx-auto text-center table-compact w-full">
                         <thead className='text-center'>
                             <tr className=''>
-                                <th>Image</th>
+                                {/* <th>Image</th> */}
                                 <th>Toys</th>
                                 <th>Seller Name</th>
                                 <th>Available</th>

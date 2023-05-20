@@ -10,7 +10,7 @@ const AllToysCard = ({ toy }) => {
         <>
             <tr>
 
-                <td>
+                {/* <td>
                     <div className="avatar">
                         <div className="rounded-lg w-12 h-12">
                             {
@@ -21,7 +21,7 @@ const AllToysCard = ({ toy }) => {
                         </div>
                     </div>
 
-                </td>
+                </td> */}
                 <td>
                     {
                         toy_name && toy_name

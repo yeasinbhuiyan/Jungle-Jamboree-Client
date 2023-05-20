@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const OceansCard = ({oceanAnimal}) => {
     const { toy_name, seller_name, subcategory, img, price, available_quantity, _id } = oceanAnimal
@@ -9,7 +10,7 @@ const OceansCard = ({oceanAnimal}) => {
             <h2 className="card-title">{toy_name}</h2>
             <p>{price}</p>
             <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+            <Link to={`/allToysDetails/${_id}`}> <button className="btn-success btn"><small>View Details</small></button></Link>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@
 // import {  FaDiscord, FaInstagram, FaTwitter } from 'react-icons/fa';
 import logo from '/logo.jpeg'
 import './Footer.css'
-import { FaArrowRight, FaFacebook, FaGithub, FaGoogle, FaGooglePlusG } from 'react-icons/fa';
+import { FaArrowRight, FaFacebook, FaGithub, FaGoogle, FaGooglePlusG, FaMailchimp } from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
         <>
 
             {/* <footer className='bg-gradient-to-r from-green-800  to-gray-500'> */}
-                {/* <section className="p-5 m-top footer-bg">
+            {/* <section className="p-5 m-top footer-bg">
 
             <div className="grid grid-cols-1 lg:grid-cols-4   p-5">
 
@@ -97,47 +97,50 @@ const Footer = () => {
 
             </div>
         </section> */}
-                <footer className="footer   p-10 py-20 bg-blue-300">
-                    <div>
+            <footer className="footer   p-10 py-20 bg-blue-300">
+                <div>
 
-                        <img className="w-20 rounded-full" src={logo} alt="" />
-                        <h1 className="font-bold text-black  mb-4  top-8 "><span className="text-2xl text-gradient">Jungle</span> <small className="font-mono text-sm">Jamboree</small></h1>
-                        <p className='text-sm font-lg font-semibold w-56'>Discover the wild world of Jungle Jamboree Toys! Explore our vast collection of animal-inspired toys.</p>
+                  
+                    <h1 className="font-bold text-black flex items-center mb-4  top-8 "><span className="text-2xl flex items-center text-gradient">  <FaMailchimp className="mr-1 text-blue-950 text-2xl"></FaMailchimp> Jungle</span> <sub className="font-mono text-sm ml-1">Jamboree</sub></h1>
+                    <p className='text-sm font-lg font-semibold w-56'>Discover the wild world of Jungle Jamboree Toys! Explore our vast collection of animal-inspired toys.</p>
+                </div>
+                <div>
+                    <span className="text-gray-700 font-bold text-xl">About</span>
+                    <a className="link link-hover">About us</a>
+                    <a className="link link-hover">Contact</a>
+                    <a className="link link-hover">Toys Information</a>
+                    <a className="link link-hover">Press Contacts</a>
+                </div>
+
+                <div>
+                    <span className="text-gray-700 font-bold text-xl">Legal Information</span>
+                    <a className="link link-hover"> Trademarks</a>
+                    <a className="link link-hover">Terms of use</a>
+                    <a className="link link-hover">Privacy policy</a>
+                    <a className="link link-hover"> Cookie Policy</a>
+                </div>
+                <div>
+                    <span className="text-gray-700 font-bold text-xl">Services</span>
+                    <a className="link link-hover">Shipping & Delivery</a>
+                    <a className="link link-hover">Online Delivery</a>
+                    <a className="link link-hover">Toy Marketing</a>
+                    <a className="link link-hover">Help Center</a>
+                </div>
+
+                <div>
+                    <span className="text-gray-700 font-bold text-xl">Newsletter</span>
+                    <div className='flex items-center'>
+                        <input className='p-3 rounded' type="email" name="email" placeholder='Enter Your Email' id="" />
+                        <button className='p-4 btn-success rounded-full'><FaArrowRight></FaArrowRight></button>
                     </div>
-                    <div>
-                        <span className="text-gray-700 font-bold text-xl">Services</span>
-                        <a className="link link-hover">Branding</a>
-                        <a className="link link-hover">Design</a>
-                        <a className="link link-hover">Marketing</a>
-                        <a className="link link-hover">Advertisement</a>
-                    </div>
-                    <div>
-                        <span className="text-gray-700 font-bold text-xl">Company</span>
-                        <a className="link link-hover">About us</a>
-                        <a className="link link-hover">Contact</a>
-                        <a className="link link-hover">Jobs</a>
-                        <a className="link link-hover">Press kit</a>
-                    </div>
-                    <div>
-                        <span className="text-gray-700 font-bold text-xl">Legal</span>
-                        <a className="link link-hover">Terms of use</a>
-                        <a className="link link-hover">Privacy policy</a>
-                        <a className="link link-hover">Cookie policy</a>
-                    </div>
-                    <div>
-                        <span className="text-gray-700 font-bold text-xl">Newsletter</span>
-                     <div className='flex items-center'>
-                     <input className='p-3 rounded' type="email" name="email" placeholder='Enter Your Email' id="" />
-                       <button className='p-4 btn-success rounded-full'><FaArrowRight></FaArrowRight></button>
-                     </div>
-                       {/* <hr  className='text-gray'/> */}
-                       <div className='gap-4 flex text-2xl mt-5'>
+                    {/* <hr  className='text-gray'/> */}
+                    <div className='gap-4 flex text-2xl mt-5'>
                         <FaGithub></FaGithub>
                         <FaGoogle></FaGoogle>
                         <FaFacebook></FaFacebook>
-                       </div>
                     </div>
-                </footer>
+                </div>
+            </footer>
 
 
             {/* </footer> */}

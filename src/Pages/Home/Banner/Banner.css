@@ -22,6 +22,13 @@
 /* https://i.ibb.co/KmrPPZm/349.jpg */
 /* https://i.ibb.co/TL2Ph7h/fluffy-toy-texture-close-up.jpg */
 
+/* pink */
+/* https://i.ibb.co/m8JrbCg/gallery1.jpg */
+
+
+/* jebra blue */
+/* https://i.ibb.co/6P53z0d/gallery2.jpg */
+
 .banner {
     background-image: url('https://i.ibb.co/TL2Ph7h/fluffy-toy-texture-close-up.jpg');
     height: 100vh;
@@ -31,12 +38,24 @@
     background-size: cover;
 
 }
-.banner-footer {
+.banner-login {
     background-image: url(' https://i.ibb.co/TL2Ph7h/fluffy-toy-texture-close-up.jpg ');
-    height: 100vh;
+    /* height: 100vh; */
     
     background-repeat: no-repeat;
 
     background-size: cover;
 
 }
+.banner-register {
+    background-image: url(' https://i.ibb.co/6P53z0d/gallery2.jpg ');
+    /* height: 100vh; */
+    
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+
+

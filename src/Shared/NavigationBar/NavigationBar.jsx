@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '/logo.jpeg';
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
+import { FaMailchimp } from "react-icons/fa";
 
 
 const NavigationBar = () => {
@@ -46,9 +47,9 @@ const NavigationBar = () => {
                     </ul>
                 </div>
  
-                <div className="flex flex-col ">
-                    <img className="w-16 mb-5 rounded-r-full  rounded-full" src={logo} alt="" />
-                    <h1 className="font-bold absolute mb-4  top-8 "><span className="text-2xl text-gradient">Jungle</span> <small className="font-mono text-sm">Jamboree</small></h1>
+                <div>
+                    {/* <img className="w-16 mb-5 rounded-r-full  rounded-full" src={logo} alt="" /> */}
+                    <h1 className="font-bold flex items-center"><span className="text-2xl text-gradient flex items-center"><FaMailchimp className="mr-1 text-blue-950 text-2xl"></FaMailchimp> Jungle</span> <sub className="font-mono ml-1 text-sm">Jamboree</sub></h1>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

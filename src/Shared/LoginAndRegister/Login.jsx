@@ -113,7 +113,7 @@ const Login = () => {
     return (
 
 
-        <form onSubmit={handleLogIn} className="main-container p-10 py-20   md:hero min-h-screen bg-base-200">
+        <form onSubmit={handleLogIn} className="main-container p-10 py-20 banner-login  md:hero min-h-screen bg-base-200">
             <div className="flex-col">
                 <div className="text-center">
                     <h1 className="text-5xl font-semibold">Please Login</h1>

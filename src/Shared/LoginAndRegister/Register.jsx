@@ -135,7 +135,7 @@ const Register = () => {
 
 
     return (
-        <form onSubmit={handleRegister} className="hero py-20 min-h-screen -z-0 bg-base-200">
+        <form onSubmit={handleRegister} className="hero py-24 banner-register min-h-screen -z-0 bg-base-200">
             <div className="flex-col p-10 ">
                 <div className="text-center">
                     <h1 className="text-4xl font-semibold">Please Register</h1>
