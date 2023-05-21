@@ -177,7 +177,7 @@ useTitle('Add Toys')
                                 <span className="label-text">Subcategory</span>
                             </label>
 
-                            <select value={category} onChange={handleCategory} className='input'>
+                            <select value={category}  onChange={handleCategory} className='input input-bordered'>
                                 <option value="Ocean Explorers">Ocean Explorers</option>
                                 <option value="Pet Pals">Pet Pals</option>
                                 <option value="Wild Kingdom">Wild Kingdom</option>
