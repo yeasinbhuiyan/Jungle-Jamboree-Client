@@ -89,6 +89,7 @@ useTitle('All Toys')
                         </thead>
                         <tbody>
                             {
+                        
                              // eslint-disable-next-line no-unused-vars
                              toys &&  toys.map( (toy,index) => <AllToysCard key={toy._id} index={index}  toy={toy}></AllToysCard>)
                             }

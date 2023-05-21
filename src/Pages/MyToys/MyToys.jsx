@@ -92,6 +92,7 @@ const MyToys = () => {
             <th>Email</th>
             <th>Toy Name</th>
             <th>Price</th>
+            <th>Quantity</th>
             <th>Edite</th>
             <th>
               Action

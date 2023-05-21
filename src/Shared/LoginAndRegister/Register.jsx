@@ -28,12 +28,12 @@ const Register = () => {
 
 
     const navigate = useNavigate()
-    const location= useLocation()
+    const location = useLocation()
 
 
     const handleRegister = (event) => {
 
-          
+
 
         event.preventDefault()
         const eventTarget = event.target
@@ -62,6 +62,7 @@ const Register = () => {
             })
             .catch((error) => {
                 console.log(error.message)
+                setError('Please Give Me Valid Email')
             })
 
     }
@@ -81,14 +82,14 @@ const Register = () => {
         setEmail(email)
         // /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 
-        
-        
+
+
         // eslint-disable-next-line no-useless-escape
         if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
 
             setEmailError('Please Give Me Valid Email')
         }
-        else{
+        else {
             setEmailError('')
         }
 
@@ -133,7 +134,7 @@ const Register = () => {
 
 
 
-useTitle('Register')
+    useTitle('Register')
 
     return (
         <form onSubmit={handleRegister} className="hero py-24 banner-register min-h-screen -z-0 bg-base-200">
@@ -199,7 +200,7 @@ useTitle('Register')
                             <button disabled={!email || !password || !img || !name || passwordError || emailError} className="btn btn-success">Register</button>
                         </div>
                         <p><small>Already have an account? <Link className='font-semibold' to='/login'>Login</Link></small></p>
-                        <p className='text-red-400'>{error}</p>
+                        <p className='text-red-400 text-sm'>{error}</p>
 
                     </div>
                 </div>

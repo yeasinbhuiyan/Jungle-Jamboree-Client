@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 const MyToysTable = ({ toy, handleDelete }) => {
-    const { img, seller_email, seller_name, price, toy_name, _id } = toy
+    const { img, seller_email, seller_name, available_quantity, price, toy_name, _id } = toy
 
 
     // const handleUpdate = (event) => {
@@ -44,14 +44,22 @@ const MyToysTable = ({ toy, handleDelete }) => {
                     </div>
                 </td>
                 <td>
-                    {seller_name}
+                    {
+                    seller_name && seller_name
+                    }
                 </td>
                 <td>{seller_email}</td>
-                <td>{toy_name}</td>
+                <td>
+                    {
+                    toy_name && toy_name
+                    }</td>
                 <td>${price}</td>
+                <td>{
+                available_quantity && available_quantity
+                }</td>
                 <th>
 
-                 <Link className="btn-success" to={`/updateMyToys/${_id}`}><small className="text-sm">Update</small></Link>
+                    <Link className="btn-success" to={`/updateMyToys/${_id}`}><small className="text-sm">Update</small></Link>
 
                     {/* <label htmlFor="my-modal" className="btn-success"  ><small className="text-sm">Update</small></label> */}
                     {/* <label htmlFor="my-modal" className="btn-success"><small className="text-sm">Update</small></label> */}
