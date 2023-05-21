@@ -78,17 +78,19 @@ useTitle('All Toys')
                         <thead className='text-center'>
                             <tr className=''>
                                 {/* <th>Image</th> */}
-                                <th>Toys</th>
+                                <th>#</th>
                                 <th>Seller Name</th>
-                                <th>Available</th>
-                                <th>Price</th>
+                                <th>Toy Name</th>
                                 <th>Subcategory</th>
+                                <th>Price</th>
+                                <th>Available</th>
                                 <th>View</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
-                             toys &&  toys.map(toy => <AllToysCard key={toy._id} toy={toy}></AllToysCard>)
+                             // eslint-disable-next-line no-unused-vars
+                             toys &&  toys.map( (toy,index) => <AllToysCard key={toy._id} index={index}  toy={toy}></AllToysCard>)
                             }
 
                         </tbody>

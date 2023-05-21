@@ -1,6 +1,7 @@
 
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hook/UseTitle';
 
 const UpdateMyToys = () => {
     const toy = useLoaderData()
@@ -41,6 +42,8 @@ const UpdateMyToys = () => {
             })
 
     }
+
+    useTitle('Update Details')
 
     return (
         <div className='m-32'>
