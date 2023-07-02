@@ -63,9 +63,6 @@ const Banner = () => {
                 <a href="#slide3" className="btn btn-outline text-cyan-600 hover:bg-cyan-600 hover:border-cyan-600 btn-circle">❯</a>
             </div>
         </div>
-
-
-
         <div id="slide3" className="carousel-item relative w-full">
             <img src={img3} className="w-full rounded-xl" />
             <div className="absolute h-full flex rounded-xl items-center  left-0 top-0  bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">

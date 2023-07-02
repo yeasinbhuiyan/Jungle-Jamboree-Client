@@ -106,10 +106,6 @@ useTitle('Add Toys')
 
 
     return (
-
-
-  
-
             <div className='md:m-40 m-10 addToy-banner my-16 '>
                 <form className="border  rounded py-10 px-10 md:px-20" onSubmit={handleSubmit}>
                     <h1 className="text-center text-4xl mb-5 font-semibold">Add A Toys</h1>

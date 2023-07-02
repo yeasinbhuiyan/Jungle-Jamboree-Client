@@ -7,12 +7,9 @@ import useTitle from '../../Hook/UseTitle';
 
 const AllToys = () => {
     const { toysQuantity } = useLoaderData()
-
-
     const [toys, setToys] = useState([])
     const [searchText, setSearchText] = useState('')
     const [currentPage, setCurrentPage] = useState(0)
-
     const [itemsPerPage, setItemsPage] = useState(20)
 
     const totalPages = Math.ceil(toysQuantity / itemsPerPage)
@@ -27,14 +24,11 @@ const AllToys = () => {
             const response = await fetch(`https://jungle-jamboree-server.vercel.app/allToys/${searchText || '1'}?page=${currentPage}&limit=${itemsPerPage}`);
             const data = await response.json();
             setToys(data);
-            // fetch(`https://jungle-jamboree-server.vercel.app/allToys/${searchText || '1'}`)
-            // .then(res => res.json())
-            // .then(data => setToys(data))
         }
-            fetchToys()
+        fetchToys()
 
-        }, [searchText,currentPage])
-    
+    }, [searchText, currentPage])
+
 
 
 
@@ -51,7 +45,7 @@ const AllToys = () => {
 
     // pagination 
 
-useTitle('All Toys')
+    useTitle('All Toys')
 
 
     return (
@@ -89,9 +83,9 @@ useTitle('All Toys')
                         </thead>
                         <tbody>
                             {
-                        
-                             // eslint-disable-next-line no-unused-vars
-                             toys &&  toys.map( (toy,index) => <AllToysCard key={toy._id} index={index}  toy={toy}></AllToysCard>)
+
+                                // eslint-disable-next-line no-unused-vars
+                                toys && toys.map((toy, index) => <AllToysCard key={toy._id} index={index} toy={toy}></AllToysCard>)
                             }
 
                         </tbody>

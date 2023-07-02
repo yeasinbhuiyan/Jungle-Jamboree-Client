@@ -6,7 +6,6 @@ import useTitle from "../../../Hook/UseTitle";
 
 
 const AllToysDetails = () => {
-    // const singleToysDetails = useLoaderData()
 
     const [toyDetail, setToyDetail] = useState({})
 

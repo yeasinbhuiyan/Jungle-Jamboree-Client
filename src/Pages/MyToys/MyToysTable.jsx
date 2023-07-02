@@ -60,21 +60,12 @@ const MyToysTable = ({ toy, handleDelete }) => {
                 <th>
 
                     <Link className="btn-success" to={`/updateMyToys/${_id}`}><small className="text-sm">Update</small></Link>
-
-                    {/* <label htmlFor="my-modal" className="btn-success"  ><small className="text-sm">Update</small></label> */}
-                    {/* <label htmlFor="my-modal" className="btn-success"><small className="text-sm">Update</small></label> */}
                 </th>
 
-
-
-
                 <th>
-
                     <FaTrashAlt onClick={() => handleDelete(_id)} className="text-red-600 mx-auto cursor-pointer"></FaTrashAlt>
                 </th>
             </tr>
-
-            {/* <Modal toy={toy}></Modal> */}
 
         </>
 

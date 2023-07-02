@@ -20,7 +20,7 @@ const AboutUs = () => {
                         <img className='absolute try1 md:top-40 top-28 left-20  md:left-40 bottom-0  w-20 rounded border-4 border-gray-200' src={img3} alt="" />
                     </div>
                 </div>
-                <div className='space-y-6 mx-auto py-10'>
+                <div data-aos="fade-up" className='space-y-6 mx-auto py-10'>
                     <h1 data-aos="fade-up" className='text-3xl border-l-indigo-400 border-l-8 p-5 rounded-full font-light'>Learn About Us</h1>
                     <div data-aos="fade-up"  className='space-y-3'>
                         <h1 className='font-semibold  text-3xl'>Join Our Animal Toys Adventure</h1>

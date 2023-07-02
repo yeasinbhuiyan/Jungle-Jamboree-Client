@@ -33,9 +33,6 @@ const About = () => {
                     </div>
                 </div>
 
-
-
-
                 <div className='space-y-10'>
                     <div data-aos="fade-up" className='space-y-4'>
                         <h1 className='font-semibold text-3xl'>Customer Satisfaction and Support</h1>

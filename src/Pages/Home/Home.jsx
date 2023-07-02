@@ -12,14 +12,14 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-           <div className="my-10 p-10">
-           <TabSubCategory></TabSubCategory>
-           </div>
+            <div className="my-10 p-10">
+                <TabSubCategory></TabSubCategory>
+            </div>
             <Gallery></Gallery>
             <AdorableAnimal></AdorableAnimal>
             <AboutUs></AboutUs>
-            
-           
+
+
 
         </div>
     );

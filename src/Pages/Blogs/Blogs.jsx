@@ -26,8 +26,6 @@ const Blogs = () => {
                     </p>
                 </div>
 
-
-
                 <div>
                     <h1 className="font-semibold text-4xl mb-5">ii. Compare SQL and NoSQL databases?</h1>
 
@@ -111,8 +109,6 @@ const Blogs = () => {
                 </div>
 
 
-
-
                 <div>
                     <h1 className="font-semibold text-4xl mb-5">iii. What is express js? What is Nest JS?</h1>
 
@@ -126,9 +122,6 @@ const Blogs = () => {
                         Next js is a popular open-source framework for building server-rendered React applications. It is built on top of React and Node.js, providing a powerful environment for developing modern web applications with features like server-side rendering
                     </p>
                 </div>
-
-
-
 
 
                 <div>
@@ -147,13 +140,7 @@ const Blogs = () => {
                     </ul>
                 </div>
 
-
-
             </div>
-
-
-
-
         </>
 
 

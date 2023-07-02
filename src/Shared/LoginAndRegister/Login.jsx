@@ -165,7 +165,7 @@ const Login = () => {
 
 
                         <p><small>Dont you have Account? <Link state={location.state} className='font-semibold' to='/register'>Register</Link></small></p>
-                        {/* state={location.state} */}
+                     
 
 
 

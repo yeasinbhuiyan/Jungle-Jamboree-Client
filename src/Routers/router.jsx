@@ -60,8 +60,6 @@ const router = createBrowserRouter([
             {
                 path: '/allToysDetails/:id',
                 element: <PrivateRoute><AllToysDetails></AllToysDetails></PrivateRoute>,
-                // loader: (params)=> fetch(`https://jungle-jamboree-server.vercel.app/singleToys/${params.id}`)
-
 
             }
 

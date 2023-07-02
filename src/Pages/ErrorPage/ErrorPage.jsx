@@ -7,7 +7,6 @@ const ErrorPage = () => {
         <div>
 
         <div className='lg:w-[30%] text-center  mx-auto '>
-
             <img src={errorBanner} alt="" />
             <Link to='/'> <button className=' btn btn-success'>Go Back</button></Link>
         </div>
